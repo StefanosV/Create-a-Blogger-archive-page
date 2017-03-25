@@ -32,7 +32,7 @@ function LoadTheArchive(TotalFeed)
 
 function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays)
 {
-    var MonthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var MonthNames=["Ιανουάριος","Φεβρουάριος","Μάρτιος","Απρίλιος","Μάιος","Ιούνιος","Ιούλιος","Αύγουστος","Σεπτέμβριος","Οκτώβριος","Νοέμβριος","Δεκέμβριος"];
     var NumberOfEntries=PostTitles.length;
     for(var EntryNum = 0; EntryNum < NumberOfEntries; EntryNum++)
     {
