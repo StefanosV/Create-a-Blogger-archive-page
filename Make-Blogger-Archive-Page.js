@@ -33,7 +33,7 @@ function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays) {
   for(var EntryNum = 0; EntryNum < NumberOfEntries; EntryNum++) {
     NameOfMonth = MonthNames[parseInt(PostMonths[EntryNum],10)-1];
     if (PostYears[EntryNum] == "2017") {
-      document.getElementById("seventeen").innerHTML += ('<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")");
+      document.getElementById("seventeen").innerHTML += insertHtml();
     }
     else if (PostYears[EntryNum] == "2016") {
       document.getElementById("sixteen").innerHTML += ('<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")");
@@ -43,3 +43,6 @@ function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays) {
     }
   }
 }
+
+function insertHtml() {
+  return '<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")";
