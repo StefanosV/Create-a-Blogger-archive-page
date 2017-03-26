@@ -36,7 +36,7 @@ function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays) {
       document.getElementById("seventeen").innerHTML += insertHtml();
     }
     else if (PostYears[EntryNum] == "2016") {
-      document.getElementById("sixteen").innerHTML += inserHtml();
+      document.getElementById("sixteen").innerHTML += insertHtml();
     }
     else if (PostYears[EntryNum] == "2015") {
       document.getElementById("fifteen").innerHTML += insertHtml();
