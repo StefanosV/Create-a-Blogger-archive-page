@@ -46,3 +46,4 @@ function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays) {
 
 function insertHtml() {
   return '<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")";
+}
