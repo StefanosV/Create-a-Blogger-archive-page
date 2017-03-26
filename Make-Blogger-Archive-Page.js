@@ -37,7 +37,7 @@ function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays)
     for(var EntryNum = 0; EntryNum < NumberOfEntries; EntryNum++)
     {
 	NameOfMonth = MonthNames[parseInt(PostMonths[EntryNum],10)-1];
-	if (true) {
+	if (PostYears[EntryNum] == "2017") {
 	  document.getElementById("seventeen").innerHTML += ('<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")");
 	  //document.write('<a href ="'+PostURLs[EntryNum]+'">'+PostTitles[EntryNum]+"</a> ("+NameOfMonth+" "+parseInt(PostDays[EntryNum],10)+", "+PostYears[EntryNum]+")<br />");
 	}
