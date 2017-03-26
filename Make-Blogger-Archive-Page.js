@@ -39,7 +39,13 @@ function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays)
 	NameOfMonth = MonthNames[parseInt(PostMonths[EntryNum],10)-1];
 	if (PostYears[EntryNum] == "2017") {
 	  document.getElementById("seventeen").innerHTML += ('<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")");
-	  //document.write('<a href ="'+PostURLs[EntryNum]+'">'+PostTitles[EntryNum]+"</a> ("+NameOfMonth+" "+parseInt(PostDays[EntryNum],10)+", "+PostYears[EntryNum]+")<br />");
+	else if (PostYears[EntryNum] == "2016") {
+          document.getElementById("sixteen").innerHTML += ('<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")");
+	}
+        else if (PostYears[EntryNum] == "2015") {
+          document.getElementById("fifteen").innerHTML += ('<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")");
+	}
+		//document.write('<a href ="'+PostURLs[EntryNum]+'">'+PostTitles[EntryNum]+"</a> ("+NameOfMonth+" "+parseInt(PostDays[EntryNum],10)+", "+PostYears[EntryNum]+")<br />");
 	}
     }
 }
