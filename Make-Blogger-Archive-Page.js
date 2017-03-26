@@ -27,6 +27,10 @@ function LoadTheArchive(TotalFeed) {
   DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays);
 }
 
+function insertHtml() {
+  return '<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")";
+}
+
 function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays) {
   var MonthNames=["Ιανουαρίου","Φεβρουαρίου","Μαρτίου","Απριλίου","Μαΐου","Ιουνίου","Ιουλίου","Αυγούστου","Σεπτεμβρίου","Οκτωβρίου","Νοεμβρίου","Δεκεμβρίου"];
   var NumberOfEntries=PostTitles.length;
@@ -42,8 +46,4 @@ function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays) {
       document.getElementById("fifteen").innerHTML += ('<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")");
     }
   }
-}
-
-function insertHtml() {
-  return '<br/><a href ="' + PostURLs[EntryNum] + '">' + PostTitles[EntryNum] + "</a> (" + parseInt(PostDays[EntryNum],10) + " " + NameOfMonth + " " + PostYears[EntryNum] + ")";
 }
