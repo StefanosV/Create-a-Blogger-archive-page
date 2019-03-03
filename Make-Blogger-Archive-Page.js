@@ -32,7 +32,10 @@ function DisplaytheTOC(PostTitles,PostURLs,PostYears,PostMonths,PostDays) {
   var NumberOfEntries=PostTitles.length;
   for(var EntryNum = 0; EntryNum < NumberOfEntries; EntryNum++) {
     NameOfMonth = MonthNames[parseInt(PostMonths[EntryNum],10)-1];
-    if (PostYears[EntryNum] == "2018") {
+    if (PostYears[EntryNum] == "2019") {
+      document.getElementById("nineteen").innerHTML += insertHtml();
+    }
+    else if (PostYears[EntryNum] == "2018") {
       document.getElementById("eighteen").innerHTML += insertHtml();
     }
     else if (PostYears[EntryNum] == "2017") {
